@@ -1,6 +1,6 @@
 [package]
 name = "tauri"
-version = "0.11.1"
+version = "0.12.0"
 authors = [
   "Lucas Fernandes Gonçalves Nogueira <lucas@tauri.studio>",
   "Daniel Thompson-Yvetot <denjell@sfosc.org>",
@@ -24,14 +24,14 @@ base64 = "0.13.0"
 webbrowser = "0.5.5"
 lazy_static = "1.4.0"
 tiny_http = { version = "0.8", optional = true }
-tokio = { version = "1.2", features = ["rt", "rt-multi-thread", "sync"] }
+tokio = { version = "1.2", features = [ "rt", "rt-multi-thread", "sync" ] }
 futures = "0.3"
 async-trait = "0.1"
 uuid = { version = "0.8.2", features = [ "v4" ] }
 thiserror = "1.0.23"
 once_cell = "1.5.2"
-tauri-api = { version = "0.7.5", path = "../tauri-api" }
-tauri-macros = { version = "0.1", path = "../tauri-macros" }
+tauri-api = { version = "0.8.0", path = "../tauri-api" }
+tauri-macros = { version = "0.2", path = "../tauri-macros" }
 wry = { git = "https://github.com/tauri-apps/wry", rev = "e6cc7f0825220a0117827b6f0a366f60ce7420ea" }
 rand = "0.8"
 
@@ -52,8 +52,6 @@ cli = [ "tauri-api/cli" ]
 embedded-server = [ "tiny_http" ]
 api-all = [ "tauri-api/notification", "tauri-api/global-shortcut" ]
 updater = [ ]
-
-# FS
 fs-all = [ ]
 fs-read-text-file = [ ]
 fs-read-binary-file = [ ]
@@ -66,29 +64,17 @@ fs-remove-dir = [ ]
 fs-remove-file = [ ]
 fs-rename-file = [ ]
 fs-path-api = [ ]
-
-# window
 window-all = [ ]
 window-create = [ ]
-
-#shell
 shell-all = [ ]
 shell-execute = [ ]
 shell-open = [ ]
-
-# dialog
 dialog-all = [ ]
 dialog-open = [ ]
 dialog-save = [ ]
-
-# HTTP
 http-all = [ ]
 http-request = [ ]
-
-# notification
 notification-all = [ "tauri-api/notification" ]
-
-# global shortcut
 global-shortcut-all = [ "tauri-api/global-shortcut" ]
 
 [[example]]
